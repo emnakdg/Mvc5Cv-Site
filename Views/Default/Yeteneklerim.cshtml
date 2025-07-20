@@ -1,0 +1,28 @@
+﻿@using MvcCv.Models.Entity
+@model List<TblYeteneklerim>
+
+<div class="resume-section-content">
+    <h2 class="mb-5">Yeteneklerim</h2>
+    <div class="subheading mb-3">Programlama Dilleri & Araçlar</div>
+    <ul class="list-inline dev-icons">
+        <i class="devicon-csharp-plain"></i>
+        <i class="devicon-dotnetcore-plain"></i>
+        <i class="devicon-microsoftsqlserver-plain-wordmark"></i>
+        <i class="devicon-postgresql-plain-wordmark"></i>
+        <i class="devicon-cplusplus-plain"></i>
+        <i class="devicon-python-plain-wordmark"></i>
+        <i class="devicon-visualstudio-plain"></i>
+        <i class="devicon-vscode-plain"></i>
+    </ul>
+    <div class="subheading mb-3">Becerilerim</div>
+    <ul class="fa-ul mb-0">
+        @foreach (var x in Model)
+        {
+            <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                @x.YETENEK
+            </li>
+        }
+    </ul>
+
+</div>
