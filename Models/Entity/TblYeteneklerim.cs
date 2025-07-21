@@ -11,10 +11,18 @@ namespace MvcCv.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TblYeteneklerim
     {
         public int ID { get; set; }
+
+        [Required(ErrorMessage = "Bu alaný boþ býrakamazsýnýz!")]
+        [StringLength(100, ErrorMessage = "En fazla 100 karakter girebilirsiniz!")]
         public string YETENEK { get; set; }
+
+        [Required(ErrorMessage = "Bu alaný boþ býrakamazsýnýz!")]
+        [Range(0, 100, ErrorMessage = "Lütfen 0-100 Arasýnda bir derece giriniz!")]
+        public Nullable<byte> ORAN { get; set; }
     }
 }

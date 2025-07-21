@@ -1,6 +1,6 @@
-﻿@model MvcCv.Models.Entity.TblDeneyimlerim
+﻿@model MvcCv.Models.Entity.TblEgitimlerim
 @{
-    ViewBag.Title = "DeneyimGetir";
+    ViewBag.Title = "EgitimGetir";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -16,25 +16,26 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h2 class="card-text">Deneyim Güncelleme Sayfası</h2>
+                                <h2 class="card-text">Eğitim Düzenleme Sayfası</h2>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
                                 <form method="post">
-                                    @Html.Label("Deneyim ID")
-                                    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
-                                    <br />
-                                    @Html.Label("Şirket")
+                                    @Html.Label("Eğitim Açıklaması")
                                     @Html.TextBoxFor(x => x.BASLIK, new { @class = "form-control" })
                                     @Html.ValidationMessageFor(x => x.BASLIK, "", new { @style = "color:red" })
                                     <br />
-                                    @Html.Label("Pozisyon Açıklaması")
-                                    @Html.TextBoxFor(x => x.ALTBASLIK, new { @class = "form-control" })
-                                    @Html.ValidationMessageFor(x => x.ALTBASLIK, "", new { @style = "color:red" })
+                                    @Html.Label("Fakülte")
+                                    @Html.TextBoxFor(x => x.ALTBASLIK1, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(x => x.ALTBASLIK1, "", new { @style = "color:red" })
                                     <br />
-                                    @Html.Label("Deneyim Açıklaması")
-                                    @Html.TextAreaFor(x => x.ACIKLAMA, new { @class = "form-control", @rows = "5" })
-                                    @Html.ValidationMessageFor(x => x.ACIKLAMA, "", new { @style = "color:red" })
+                                    @Html.Label("Bölüm")
+                                    @Html.TextBoxFor(x => x.ALTBASLIK2, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(x => x.ALTBASLIK2, "", new { @style = "color:red" })
+                                    <br />
+                                    @Html.Label("GNO")
+                                    @Html.TextBoxFor(x => x.GNO, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(x => x.GNO, "", new { @style = "color:red" })
                                     <br />
                                     @Html.Label("Tarih")
                                     @Html.TextBoxFor(x => x.TARIH, new { @class = "form-control" })

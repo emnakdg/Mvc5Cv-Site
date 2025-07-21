@@ -1,5 +1,5 @@
 ﻿@using MvcCv.Models.Entity
-@model List<TblDeneyimlerim>
+@model List<TblEgitimlerim>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -17,32 +17,36 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h2 class="card-text">Deneyim Listem</h2>
+                                <h2 class="card-text">Eğitim Listem</h2>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
                                 <table class="table table-bordered">
                                     <tr>
                                         <th style="width: 10px">ID</th>
-                                        <th>Şirket</th>
-                                        <th>Pozisyon</th>
+                                        <th>Eğitim</th>
+                                        <th>Fakülte</th>
+                                        <th>Bölüm</th>
+                                        <th>GNO</th>
                                         <th>Tarih</th>
-                                        <th style="width: 160px">İşlemler</th>
+                                        <th>İşlemler</th>
                                     </tr>
                                     @foreach (var item in Model)
                                     {
                                         <tr>
                                             <td>@item.ID</td>
                                             <td>@item.BASLIK</td>
-                                            <td>@item.ALTBASLIK</td>
+                                            <td>@item.ALTBASLIK1</td>
+                                            <td>@item.ALTBASLIK2</td>
+                                            <td>@item.GNO</td>
                                             <td>@item.TARIH</td>
                                             <td>
-                                                <a href="/Deneyim/DeneyimGetir/@item.ID" class="btn btn-info btn-sm">
+                                                <a href="/Egitim/EgitimGetir/@item.ID" class="btn btn-info btn-sm">
                                                     <i class="fas fa-pencil-alt"></i>
                                                     Düzenle
                                                 </a>
 
-                                                <a href="/Deneyim/DeneyimSil/@item.ID" class="btn btn-danger btn-sm">
+                                                <a href="/Egitim/EgitimSil/@item.ID" class="btn btn-danger btn-sm">
                                                     <i class="fas fa-trash"></i>
                                                     Sil
                                                 </a>
@@ -51,7 +55,7 @@
                                     }
                                 </table>
                                 <br />
-                                <a href="/Deneyim/DeneyimEkle/" class="btn btn-primary">Yeni Deneyim Ekle</a>
+                                <a href="/Egitim/YeniEgitim/" class="btn btn-primary">Yeni Eğitim Ekle</a>
                             </div>
                         </div>
                         <!-- /.card -->

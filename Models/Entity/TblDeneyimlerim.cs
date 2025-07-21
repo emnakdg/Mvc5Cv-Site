@@ -11,13 +11,25 @@ namespace MvcCv.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TblDeneyimlerim
     {
         public int ID { get; set; }
+
+        [Required(ErrorMessage = "Bu alaný boþ býrakamazsýnýz!")]
+        [StringLength(100, ErrorMessage = "En fazla 100 karakter girebilirsiniz!")]
         public string BASLIK { get; set; }
+
+        [Required(ErrorMessage = "Bu alaný boþ býrakamazsýnýz!")]
+        [StringLength(100, ErrorMessage = "En fazla 100 karakter girebilirsiniz!")]
         public string ALTBASLIK { get; set; }
+
+        [Required(ErrorMessage = "Bu alaný boþ býrakamazsýnýz!")]
         public string ACIKLAMA { get; set; }
+
+        [Required(ErrorMessage = "Bu alaný boþ býrakamazsýnýz!")]
+        [StringLength(100, ErrorMessage = "En fazla 100 karakter girebilirsiniz!")]
         public string TARIH { get; set; }
     }
 }
