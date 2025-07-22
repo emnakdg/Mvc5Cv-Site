@@ -11,10 +11,18 @@ namespace MvcCv.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TblSertifikalarım
     {
         public int ID { get; set; }
+
+        [Required(ErrorMessage = "Bu alanı boş bırakamazsınız!")]
+        [StringLength(250, ErrorMessage = "En fazla 250 karakter girebilirsiniz!")]
         public string ACIKLAMA { get; set; }
+
+        [Required(ErrorMessage = "Bu alanı boş bırakamazsınız!")]
+        [StringLength(30, ErrorMessage = "En fazla 30 karakter girebilirsiniz!")]
+        public string TARIH { get; set; }
     }
 }

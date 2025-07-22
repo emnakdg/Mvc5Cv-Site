@@ -22,7 +22,7 @@ namespace MvcCv.Models.Entity
         public string YETENEK { get; set; }
 
         [Required(ErrorMessage = "Bu alaný boþ býrakamazsýnýz!")]
-        [Range(0, 100, ErrorMessage = "Lütfen 0-100 Arasýnda bir derece giriniz!")]
+        [Range(0, 100, ErrorMessage = "0-100 arasý bir deðer giriniz!")]
         public Nullable<byte> ORAN { get; set; }
     }
 }

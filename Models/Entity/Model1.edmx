@@ -71,6 +71,7 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TARIH" Type="varchar" MaxLength="30" />
           <Property Name="ACIKLAMA" Type="varchar" MaxLength="250" />
         </EntityType>
         <EntityType Name="TblYeteneklerim">
@@ -162,6 +163,7 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ACIKLAMA" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="TARIH" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="TblYeteneklerim">
           <Key>
@@ -257,6 +259,7 @@
           <EntitySetMapping Name="TblSertifikalarım">
             <EntityTypeMapping TypeName="DbCvModel.TblSertifikalarım">
               <MappingFragment StoreEntitySet="TblSertifikalarım">
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
               </MappingFragment>

@@ -1,0 +1,48 @@
+﻿@model MvcCv.Models.Entity.TblSertifikalarım
+@{
+    ViewBag.Title = "SertifikaGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 class="card-text">Sertifika Güncelleme Sayfası</h2>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <form method="post">
+                                    @Html.Label("Sertifika ID")
+                                    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+                                    <br />
+                                    @Html.Label("Sertifika Açıklaması")
+                                    @Html.TextBoxFor(x => x.ACIKLAMA, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(x => x.ACIKLAMA, "", new { @style = "color:red" })
+                                    <br />
+                                    @Html.Label("Tarih")
+                                    @Html.TextBoxFor(x => x.TARIH, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(x => x.TARIH, "", new { @style = "color:red" })
+                                    <br />
+                                    <button class="btn btn-info">Güncelle</button>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+</body>
+</html>
+

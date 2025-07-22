@@ -17,7 +17,7 @@ namespace MvcCv.Models.Entity
     {
         public int ID { get; set; }
 
-        [Required (ErrorMessage = "Bu alaný boþ býrakamazsýnýz!")]
+        [Required(ErrorMessage = "Bu alaný boþ býrakamazsýnýz!")]
         [StringLength(100, ErrorMessage = "En fazla 100 karakter girebilirsiniz!")]
         public string BASLIK { get; set; }
 
@@ -30,7 +30,7 @@ namespace MvcCv.Models.Entity
         public string ALTBASLIK2 { get; set; }
 
         [Required(ErrorMessage = "Bu alaný boþ býrakamazsýnýz!")]
-        [Range(0.00, 4.0, ErrorMessage = "0.00-4.00 arasýnda bir deðer giriniz!")]
+        [Range(0.00, 4.00, ErrorMessage = "0.00-4.00 arasý bir deðer giriniz!")]
         public string GNO { get; set; }
 
         [Required(ErrorMessage = "Bu alaný boþ býrakamazsýnýz!")]
