@@ -4,7 +4,6 @@ using System.Web.Mvc;
 
 namespace MvcCv.Controllers
 {
-    [AllowAnonymous] // Ensure that only authenticated users can access this controller
     public class AdminController : Controller
     {
         // GET: Admin
