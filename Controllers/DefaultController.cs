@@ -5,6 +5,7 @@ using System.Web.Mvc;
 
 namespace MvcCv.Controllers
 {
+    [AllowAnonymous] // Ensure that the user is authenticated before accessing this controller
     public class DefaultController : Controller
     {
         // GET: Default
@@ -13,6 +14,11 @@ namespace MvcCv.Controllers
         {
             var degerler = db.TblHakkimda.ToList();
             return View(degerler);
+        }
+        public PartialViewResult SosyalMedya()
+        {
+            var sosyalmedya = db.TblSosyalMedya.ToList();
+            return PartialView(sosyalmedya);
         }
 
         public PartialViewResult Deneyim()

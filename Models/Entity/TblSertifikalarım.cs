@@ -17,12 +17,12 @@ namespace MvcCv.Models.Entity
     {
         public int ID { get; set; }
 
-        [Required(ErrorMessage = "Bu alanı boş bırakamazsınız!")]
-        [StringLength(250, ErrorMessage = "En fazla 250 karakter girebilirsiniz!")]
+        [Required(ErrorMessage = "Bu alan boş bırakılamaz!")]
+        [StringLength(250, ErrorMessage = "En fazla 250 karakter olabilir!")]
         public string ACIKLAMA { get; set; }
 
-        [Required(ErrorMessage = "Bu alanı boş bırakamazsınız!")]
-        [StringLength(30, ErrorMessage = "En fazla 30 karakter girebilirsiniz!")]
+        [Required(ErrorMessage = "Bu alan boş bırakılamaz!")]
+        [StringLength(30, ErrorMessage = "En fazla 30 karakter olabilir!")]
         public string TARIH { get; set; }
     }
 }

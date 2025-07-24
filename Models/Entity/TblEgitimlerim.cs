@@ -17,24 +17,24 @@ namespace MvcCv.Models.Entity
     {
         public int ID { get; set; }
 
-        [Required(ErrorMessage = "Bu alaný boþ býrakamazsýnýz!")]
-        [StringLength(100, ErrorMessage = "En fazla 100 karakter girebilirsiniz!")]
+        [Required(ErrorMessage = "Bu alan boþ býrakýlamaz!")]
+        [StringLength(100, ErrorMessage = "En fazla 100 karakter olabilir!")]
         public string BASLIK { get; set; }
 
-        [Required(ErrorMessage = "Bu alaný boþ býrakamazsýnýz!")]
-        [StringLength(100, ErrorMessage = "En fazla 100 karakter girebilirsiniz!")]
+        [Required(ErrorMessage = "Bu alan boþ býrakýlamaz!")]
+        [StringLength(100, ErrorMessage = "En fazla 100 karakter olabilir!")]
         public string ALTBASLIK1 { get; set; }
 
-        [Required(ErrorMessage = "Bu alaný boþ býrakamazsýnýz!")]
-        [StringLength(100, ErrorMessage = "En fazla 100 karakter girebilirsiniz!")]
+        [Required(ErrorMessage = "Bu alan boþ býrakýlamaz!")]
+        [StringLength(100, ErrorMessage = "En fazla 100 karakter olabilir!")]
         public string ALTBASLIK2 { get; set; }
 
-        [Required(ErrorMessage = "Bu alaný boþ býrakamazsýnýz!")]
+        [Required(ErrorMessage = "Bu alan boþ býrakýlamaz!")]
         [Range(0.00, 4.00, ErrorMessage = "0.00-4.00 arasý bir deðer giriniz!")]
         public string GNO { get; set; }
 
-        [Required(ErrorMessage = "Bu alaný boþ býrakamazsýnýz!")]
-        [StringLength(100, ErrorMessage = "En fazla 100 karakter girebilirsiniz!")]
+        [Required(ErrorMessage = "Bu alan boþ býrakýlamaz!")]
+        [StringLength(100, ErrorMessage = "En fazla 100 karakter olabilir!")]
         public string TARIH { get; set; }
     }
 }

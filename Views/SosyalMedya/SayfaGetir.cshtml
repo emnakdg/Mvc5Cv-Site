@@ -1,0 +1,49 @@
+﻿@model MvcCv.Models.Entity.TblSosyalMedya
+@{
+    ViewBag.Title = "SayfaGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 class="card-text">Sosyal Medya Hesap Düzenleme Sayfası</h2>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <form method="post">
+                                    @Html.Label("Sosyal Medya Adı")
+                                    @Html.TextBoxFor(x => x.AD, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(x => x.AD, "", new { @style = "color:red" })
+                                    <br />
+                                    @Html.Label("Sosyal Medya Linki")
+                                    @Html.TextBoxFor(x => x.LINK, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(x => x.LINK, "", new { @style = "color:red" })
+                                    <br />
+                                    @Html.Label("İkon")
+                                    @Html.TextBoxFor(x => x.IKON, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(x => x.IKON, "", new { @style = "color:red" })
+                                    <br />
+                                    <button class="btn btn-info">Güncelle</button>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+</body>
+</html>
+

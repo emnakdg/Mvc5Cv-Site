@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using MvcCv.Models.Entity;
+using MvcCv.Repositories;
 using System.Web.Mvc;
 
 namespace MvcCv.Controllers
@@ -9,9 +7,11 @@ namespace MvcCv.Controllers
     public class IletisimController : Controller
     {
         // GET: Iletisim
+        GenericRepository<Tbliletisim> iletisimRepository = new GenericRepository<Tbliletisim>();
         public ActionResult Index()
         {
-            return View();
+            var iletisim = iletisimRepository.List();
+            return View(iletisim);
         }
     }
 }

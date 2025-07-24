@@ -17,19 +17,19 @@ namespace MvcCv.Models.Entity
     {
         public int ID { get; set; }
 
-        [Required(ErrorMessage = "Bu alaný boþ býrakamazsýnýz!")]
-        [StringLength(100, ErrorMessage = "En fazla 100 karakter girebilirsiniz!")]
+        [Required(ErrorMessage = "Bu alan boþ býrakýlamaz!")]
+        [StringLength(100, ErrorMessage = "En fazla 100 karakter olabilir!")]
         public string BASLIK { get; set; }
 
-        [Required(ErrorMessage = "Bu alaný boþ býrakamazsýnýz!")]
-        [StringLength(100, ErrorMessage = "En fazla 100 karakter girebilirsiniz!")]
+        [Required(ErrorMessage = "Bu alan boþ býrakýlamaz!")]
+        [StringLength(100, ErrorMessage = "En fazla 100 karakter olabilir!")]
         public string ALTBASLIK { get; set; }
 
-        [Required(ErrorMessage = "Bu alaný boþ býrakamazsýnýz!")]
+        [Required(ErrorMessage = "Bu alan boþ býrakýlamaz!")]
         public string ACIKLAMA { get; set; }
 
-        [Required(ErrorMessage = "Bu alaný boþ býrakamazsýnýz!")]
-        [StringLength(100, ErrorMessage = "En fazla 100 karakter girebilirsiniz!")]
+        [Required(ErrorMessage = "Bu alan boþ býrakýlamaz!")]
+        [StringLength(100, ErrorMessage = "En fazla 100 karakter olabilir!")]
         public string TARIH { get; set; }
     }
 }

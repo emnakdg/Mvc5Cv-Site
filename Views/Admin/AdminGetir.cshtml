@@ -1,0 +1,48 @@
+﻿@model MvcCv.Models.Entity.TblAdmin
+@{
+    ViewBag.Title = "AdminGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 class="card-text">Kullanıcı Güncelleme Sayfası</h2>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <form method="post">
+                                    @Html.Label("Admin ID")
+                                    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+                                    <br />
+                                    @Html.Label("Kullanıcı Adı")
+                                    @Html.TextBoxFor(x => x.KULLANICIADI, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(x => x.KULLANICIADI, "", new { @style = "color:red" })
+                                    <br />
+                                    @Html.Label("Şifre")
+                                    @Html.TextBoxFor(x => x.SIFRE, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(x => x.SIFRE, "", new { @style = "color:red" })
+                                    <br />
+                                    <button class="btn btn-info">Güncelle</button>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+</body>
+</html>
+
